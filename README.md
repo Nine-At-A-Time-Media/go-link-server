@@ -20,14 +20,11 @@ Ensure you have Homebrew installed on your Mac. If not, install it with the foll
    Configure `pyenv` to use a specific Python version:
    ```bash
    pyenv install 3.9.5
-   echo "3.9.5" > .python-version
    ```
 
 3. **Enable direnv:**
-   Append the direnv hook to your shell configuration and reload it:
    ```bash
-   echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
-   source ~/.zshrc
+   direnv allow
    ```
 
 4. **Install Python dependencies:**
@@ -37,9 +34,9 @@ Ensure you have Homebrew installed on your Mac. If not, install it with the foll
    ```
 
 5. **Install Node.js using nvm:**
-   First, install nvm (Node Version Manager):
+   First, install nvm (Node Version Manager) using brew
    ```bash
-   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh
+   brew install nvm  # follow any additional instructions it has
    nvm install --lts
    ```
 
